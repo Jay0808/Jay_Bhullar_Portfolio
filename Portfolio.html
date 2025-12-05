@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Portfolio | Your Friend's Name</title>
+  <title>Jay Bhullar Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="Portfolio of Your Friend's Name – Developer, Designer, and Problem Solver."
   />
-
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-
   <style>
     :root {
       --bg: #050816;
@@ -35,13 +33,11 @@
       --transition-med: 220ms ease-out;
       --nav-height: 70px;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html,
     body {
       scroll-behavior: smooth;
@@ -49,28 +45,23 @@
       color: var(--text);
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
-
     body {
       min-height: 100vh;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     img {
       max-width: 100%;
       display: block;
     }
-
     /* Layout */
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem 4rem;
     }
-
     header {
       position: sticky;
       top: 0;
@@ -84,7 +75,6 @@
       );
       border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     }
-
     .nav {
       height: var(--nav-height);
       display: flex;
@@ -92,13 +82,11 @@
       justify-content: space-between;
       gap: 1rem;
     }
-
     .nav-brand {
       display: flex;
       align-items: center;
       gap: 0.6rem;
     }
-
     .nav-logo {
       width: 32px;
       height: 32px;
@@ -113,7 +101,6 @@
       );
       padding: 2px;
     }
-
     .nav-logo-inner {
       width: 100%;
       height: 100%;
@@ -127,30 +114,25 @@
       letter-spacing: 0.06em;
       color: var(--accent);
     }
-
     .nav-title {
       display: flex;
       flex-direction: column;
       line-height: 1.2;
     }
-
     .nav-title-main {
       font-size: 0.95rem;
       font-weight: 600;
     }
-
     .nav-title-sub {
       font-size: 0.7rem;
       color: var(--muted);
     }
-
     .nav-links {
       display: flex;
       align-items: center;
       gap: 1.5rem;
       font-size: 0.85rem;
     }
-
     .nav-link {
       position: relative;
       color: var(--muted);
@@ -158,7 +140,6 @@
       padding-bottom: 2px;
       transition: color var(--transition-fast);
     }
-
     .nav-link::after {
       content: "";
       position: absolute;
@@ -170,15 +151,12 @@
       background: linear-gradient(90deg, #38bdf8, #a855f7);
       transition: width var(--transition-med);
     }
-
     .nav-link:hover {
       color: var(--text);
     }
-
     .nav-link:hover::after {
       width: 100%;
     }
-
     .nav-cta {
       display: flex;
       align-items: center;
@@ -195,21 +173,17 @@
       transition: transform var(--transition-fast), box-shadow var(--transition-fast);
       white-space: nowrap;
     }
-
     .nav-cta span {
       font-size: 1rem;
     }
-
     .nav-cta:hover {
       transform: translateY(-1px);
       box-shadow: 0 14px 40px rgba(37, 99, 235, 0.7);
     }
-
     .nav-cta:active {
       transform: translateY(0px) scale(0.98);
       box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
     }
-
     /* Hero */
     .hero {
       padding: 3rem 0 3.5rem;
@@ -218,7 +192,6 @@
       gap: 2.75rem;
       align-items: center;
     }
-
     .hero-kicker {
       display: inline-flex;
       align-items: center;
@@ -231,7 +204,6 @@
       font-size: 0.7rem;
       margin-bottom: 1rem;
     }
-
     .hero-kicker-dot {
       width: 6px;
       height: 6px;
@@ -239,20 +211,17 @@
       background: #22c55e;
       box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
     }
-
     .hero-title {
       font-size: clamp(2.2rem, 3.2vw + 1.6rem, 3.4rem);
       line-height: 1.1;
       margin-bottom: 1rem;
       letter-spacing: -0.03em;
     }
-
     .hero-title span {
       background: linear-gradient(120deg, #38bdf8, #a855f7, #f97316);
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .hero-subtitle {
       font-size: 0.96rem;
       line-height: 1.6;
@@ -260,14 +229,12 @@
       max-width: 540px;
       margin-bottom: 1.4rem;
     }
-
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
       margin-bottom: 1.7rem;
     }
-
     .hero-tag {
       font-size: 0.72rem;
       padding: 0.25rem 0.6rem;
@@ -276,7 +243,6 @@
       background: rgba(15, 23, 42, 0.85);
       color: var(--muted);
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -284,7 +250,6 @@
       align-items: center;
       margin-bottom: 0.75rem;
     }
-
     .btn-primary {
       padding: 0.7rem 1.4rem;
       border-radius: 999px;
@@ -300,12 +265,10 @@
       gap: 0.5rem;
       transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     }
-
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 18px 38px rgba(15, 23, 42, 0.85);
     }
-
     .btn-secondary {
       padding: 0.7rem 1.3rem;
       border-radius: 999px;
@@ -321,27 +284,22 @@
       transition: background var(--transition-fast), border-color var(--transition-fast),
         transform var(--transition-fast);
     }
-
     .btn-secondary:hover {
       background: rgba(15, 23, 42, 0.95);
       border-color: var(--accent);
       transform: translateY(-1px);
     }
-
     .hero-note {
       font-size: 0.8rem;
       color: var(--muted);
     }
-
     .hero-note strong {
       color: var(--accent);
       font-weight: 600;
     }
-
     .hero-right {
       position: relative;
     }
-
     .hero-card {
       border-radius: var(--radius-xl);
       padding: 1.4rem 1.4rem 1.2rem;
@@ -351,7 +309,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero-avatar {
       width: 88px;
       height: 88px;
@@ -364,32 +321,27 @@
       font-size: 2.3rem;
       margin-bottom: 0.9rem;
     }
-
     .hero-avatar span {
       background: linear-gradient(135deg, #38bdf8, #f97316);
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .hero-card-name {
       font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.1rem;
     }
-
     .hero-card-role {
       font-size: 0.8rem;
       color: var(--muted);
       margin-bottom: 0.9rem;
     }
-
     .hero-pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
       margin-bottom: 1.1rem;
     }
-
     .hero-pill {
       font-size: 0.7rem;
       padding: 0.3rem 0.6rem;
@@ -398,7 +350,6 @@
       border: 1px solid rgba(148, 163, 184, 0.45);
       color: var(--muted);
     }
-
     .hero-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -406,25 +357,21 @@
       margin-bottom: 1.1rem;
       font-size: 0.8rem;
     }
-
     .hero-meta-item {
       padding: 0.45rem 0.55rem;
       border-radius: 0.9rem;
       background: rgba(15, 23, 42, 0.85);
       border: 1px solid rgba(148, 163, 184, 0.45);
     }
-
     .hero-meta-label {
       color: var(--muted);
       font-size: 0.7rem;
       margin-bottom: 0.15rem;
     }
-
     .hero-meta-value {
       font-weight: 600;
       font-size: 0.95em;
     }
-
     .hero-card-footer {
       display: flex;
       justify-content: space-between;
@@ -435,13 +382,11 @@
       padding-top: 0.7rem;
       margin-top: 0.4rem;
     }
-
     .hero-status {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
     }
-
     .status-dot {
       width: 7px;
       height: 7px;
@@ -449,7 +394,6 @@
       background: #22c55e;
       box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
     }
-
     .hero-card-badge {
       padding: 0.3rem 0.6rem;
       border-radius: 999px;
@@ -459,14 +403,12 @@
       font-size: 0.7rem;
       font-weight: 500;
     }
-
     .hero-orbit {
       position: absolute;
       inset: 0;
       pointer-events: none;
       opacity: 0.8;
     }
-
     .hero-orbit::before,
     .hero-orbit::after {
       content: "";
@@ -474,20 +416,16 @@
       border-radius: 999px;
       border: 1px dashed rgba(148, 163, 184, 0.35);
     }
-
     .hero-orbit::before {
       inset: 18% 6% 50% 18%;
     }
-
     .hero-orbit::after {
       inset: 50% 10% 12% 6%;
     }
-
     /* Generic section styling */
     section {
       padding: 2.25rem 0;
     }
-
     .section-header {
       display: flex;
       justify-content: space-between;
@@ -495,19 +433,16 @@
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
-
     .section-title {
       font-size: 1.4rem;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
-
     .section-subtitle {
       font-size: 0.86rem;
       color: var(--muted);
       max-width: 420px;
     }
-
     .section-pill {
       font-size: 0.74rem;
       padding: 0.3rem 0.7rem;
@@ -516,35 +451,29 @@
       color: var(--muted);
       background: rgba(15, 23, 42, 0.8);
     }
-
     /* About */
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
       gap: 2rem;
     }
-
     .about-text {
       font-size: 0.92rem;
       color: var(--muted);
       line-height: 1.7;
     }
-
     .about-text p + p {
       margin-top: 0.7rem;
     }
-
     .about-highlight {
       color: var(--accent);
       font-weight: 500;
     }
-
     .about-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 0.9rem;
     }
-
     .about-card {
       border-radius: var(--radius-lg);
       background: rgba(15, 23, 42, 0.9);
@@ -552,31 +481,26 @@
       padding: 0.9rem 0.95rem;
       font-size: 0.85rem;
     }
-
     .about-card-label {
       color: var(--muted);
       font-size: 0.74rem;
       margin-bottom: 0.15rem;
     }
-
     .about-card-value {
       font-weight: 600;
     }
-
     /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: 2.3fr 3fr;
       gap: 1.8rem;
     }
-
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.55rem;
       font-size: 0.78rem;
     }
-
     .skill-tag {
       padding: 0.35rem 0.7rem;
       border-radius: 999px;
@@ -584,33 +508,27 @@
       border: 1px solid rgba(148, 163, 184, 0.45);
       color: var(--muted);
     }
-
     .skill-bars {
       display: grid;
       gap: 0.75rem;
     }
-
     .skill-bar {
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
     }
-
     .skill-bar-header {
       display: flex;
       justify-content: space-between;
       font-size: 0.8rem;
     }
-
     .skill-bar-label {
       color: var(--muted);
     }
-
     .skill-bar-value {
       font-size: 0.78rem;
       color: var(--muted);
     }
-
     .skill-bar-track {
       position: relative;
       height: 7px;
@@ -619,21 +537,18 @@
       overflow: hidden;
       border: 1px solid rgba(15, 23, 42, 0.8);
     }
-
     .skill-bar-fill {
       position: absolute;
       inset: 0;
       transform-origin: left;
       background: linear-gradient(90deg, #38bdf8, #22c55e);
     }
-
     /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.4rem;
     }
-
     .project-card {
       position: relative;
       border-radius: var(--radius-lg);
@@ -648,13 +563,11 @@
         border-color var(--transition-med);
       cursor: pointer;
     }
-
     .project-card:hover {
       transform: translateY(-4px) translateZ(0);
       box-shadow: var(--shadow-soft);
       border-color: rgba(56, 189, 248, 0.7);
     }
-
     .project-badge-row {
       display: flex;
       justify-content: space-between;
@@ -662,37 +575,31 @@
       font-size: 0.75rem;
       color: var(--muted);
     }
-
     .project-type {
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.4);
     }
-
     .project-status {
       font-size: 0.72rem;
       color: var(--accent);
     }
-
     .project-title {
       font-size: 0.98rem;
       font-weight: 600;
     }
-
     .project-desc {
       font-size: 0.8rem;
       color: var(--muted);
       line-height: 1.6;
     }
-
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
       margin-top: 0.25rem;
     }
-
     .project-tag {
       font-size: 0.72rem;
       padding: 0.25rem 0.5rem;
@@ -701,21 +608,18 @@
       border: 1px solid rgba(148, 163, 184, 0.4);
       color: var(--muted);
     }
-
     .project-links {
       margin-top: 0.3rem;
       display: flex;
       gap: 0.7rem;
       font-size: 0.78rem;
     }
-
     .project-link {
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
       color: var(--accent);
     }
-
     /* Experience */
     .timeline {
       border-left: 1px solid rgba(148, 163, 184, 0.4);
@@ -724,12 +628,10 @@
       display: grid;
       gap: 1.1rem;
     }
-
     .timeline-item {
       position: relative;
       font-size: 0.85rem;
     }
-
     .timeline-dot {
       position: absolute;
       left: -1.375rem;
@@ -741,39 +643,32 @@
       background: linear-gradient(135deg, #38bdf8, #a855f7);
       box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.18);
     }
-
     .timeline-role {
       font-weight: 600;
       margin-bottom: 0.05rem;
     }
-
     .timeline-meta {
       font-size: 0.75rem;
       color: var(--muted);
       margin-bottom: 0.25rem;
     }
-
     .timeline-body {
       font-size: 0.8rem;
       color: var(--muted);
     }
-
     .timeline-body ul {
       margin-top: 0.3rem;
       padding-left: 1.1rem;
     }
-
     .timeline-body li {
       margin-bottom: 0.18rem;
     }
-
     /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       gap: 1.8rem;
     }
-
     .contact-card {
       border-radius: var(--radius-lg);
       padding: 1.3rem 1.2rem;
@@ -782,22 +677,18 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
-
     .contact-card p + p {
       margin-top: 0.6rem;
     }
-
     .contact-highlight {
       color: var(--accent);
       font-weight: 500;
     }
-
     .contact-details {
       display: grid;
       gap: 0.5rem;
       margin-top: 0.9rem;
     }
-
     .contact-item {
       display: flex;
       align-items: center;
@@ -805,31 +696,25 @@
       gap: 1rem;
       font-size: 0.8rem;
     }
-
     .contact-label {
       color: var(--muted);
     }
-
     .contact-value {
       font-weight: 500;
     }
-
     .contact-form {
       display: grid;
       gap: 0.8rem;
       font-size: 0.82rem;
     }
-
     .form-field {
       display: grid;
       gap: 0.25rem;
     }
-
     label {
       color: var(--muted);
       font-size: 0.78rem;
     }
-
     input,
     textarea {
       border-radius: 0.85rem;
@@ -842,28 +727,23 @@
       outline: none;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     }
-
     input:focus,
     textarea:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.7);
     }
-
     textarea {
       resize: vertical;
       min-height: 110px;
     }
-
     .form-note {
       font-size: 0.74rem;
       color: var(--muted);
     }
-
     .form-submit {
       justify-self: flex-start;
       margin-top: 0.1rem;
     }
-
     /* Footer */
     footer {
       padding-top: 1.5rem;
@@ -875,51 +755,41 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
     .footer-links {
       display: flex;
       gap: 0.9rem;
     }
-
     .footer-links a {
       color: var(--muted);
     }
-
     .footer-links a:hover {
       color: var(--accent);
     }
-
     /* Responsive */
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .hero-right {
         order: -1;
       }
-
       .about-grid,
       .skills-grid,
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .section-header {
         flex-direction: column;
         align-items: flex-start;
       }
     }
-
     @media (max-width: 700px) {
       .nav-links {
         display: none;
       }
-
       .hero {
         padding-top: 2.2rem;
       }
-
       .page {
         padding-inline: 1.1rem;
       }
@@ -956,7 +826,6 @@
       </nav>
     </div>
   </header>
-
   <main class="page">
     <!-- HERO -->
     <section aria-label="Hero">
@@ -964,7 +833,7 @@
         <div>
           <div class="hero-kicker">
             <span class="hero-kicker-dot"></span>
-            Available for internships & collaborations
+            Available for internships and collaborations
           </div>
           <h1 class="hero-title">
             Hi, I’m <span>Your Friend’s Name</span> – crafting clean, thoughtful digital experiences.
@@ -974,13 +843,11 @@
             intuitive, and delightful to use. I enjoy turning complex problems into simple, beautiful
             solutions.
           </p>
-
           <div class="hero-tags">
             <span class="hero-tag">Front-end Development</span>
             <span class="hero-tag">UI/UX Thinking</span>
-            <span class="hero-tag">Clean & Maintainable Code</span>
+            <span class="hero-tag">Clean and Maintainable Code</span>
           </div>
-
           <div class="hero-actions">
             <button class="btn-primary">
               📄 Download CV
@@ -997,26 +864,22 @@
             that bridge design and engineering.
           </p>
         </div>
-
         <div class="hero-right">
           <div class="hero-card">
             <div class="hero-avatar">
-              <!-- Replace initials if you want -->
               <span>FM</span>
             </div>
             <div class="hero-card-name">Your Friend’s Name</div>
-            <div class="hero-card-role">Aspiring Front-end / Full-stack Developer</div>
-
+            <div class="hero-card-role">Aspiring Front-end and Full-stack Developer</div>
             <div class="hero-pill-row">
               <span class="hero-pill">Based in Your City</span>
               <span class="hero-pill">Open to remote</span>
               <span class="hero-pill">Student portfolio</span>
             </div>
-
             <div class="hero-meta">
               <div class="hero-meta-item">
                 <div class="hero-meta-label">Focus</div>
-                <div class="hero-meta-value">Web & UI</div>
+                <div class="hero-meta-value">Web and UI</div>
               </div>
               <div class="hero-meta-item">
                 <div class="hero-meta-label">Experience</div>
@@ -1027,7 +890,6 @@
                 <div class="hero-meta-value">GMT-XX</div>
               </div>
             </div>
-
             <div class="hero-card-footer">
               <div class="hero-status">
                 <span class="status-dot"></span>
@@ -1035,61 +897,70 @@
               </div>
               <div class="hero-card-badge">Replies within 24h</div>
             </div>
-
             <div class="hero-orbit"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (updated paragraph, no em dashes) -->
     <section id="about" aria-labelledby="about-title">
       <div class="section-header">
         <div>
           <h2 id="about-title" class="section-title">About</h2>
           <p class="section-subtitle">
-            A quick snapshot of who I am, what I care about, and how I approach building software.
+            A brief overview of my academic background, interests, and how I approach analytics and AI.
           </p>
         </div>
-        <span class="section-pill">Beyond just code</span>
+        <span class="section-pill">Who I am</span>
       </div>
 
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I’m a <span class="about-highlight">Computer Science student</span> with a strong interest
-            in front-end development and digital product design. I love building projects that are not
-            only functional, but also visually cohesive and easy to use.
+            I am a Computer Science graduate with a minor in Mathematics and Statistics. I am currently
+            pursuing a Master of Business Analytics and AI at Ontario Tech University. I enjoy working at
+            the intersection of technology and business, using data to support decisions and uncover new
+            opportunities for improvement.
           </p>
           <p>
-            Outside of code, I enjoy learning about design systems, typography, and how small details
-            can make a big difference in user experience. My goal is to grow into a developer who can
-            collaborate smoothly with designers, engineers, and stakeholders.
+            My goal is to apply advanced analytics and AI to real business challenges, including improving
+            strategy, optimizing operations, and creating measurable impact. I am interested in roles in
+            data analytics, AI strategy and technology consulting.
           </p>
           <p>
-            Right now, I’m focused on strengthening my fundamentals – from semantic HTML and accessible
-            components to performance optimizations and clean, modular architecture.
+            I am always open to learning, collaborating and connecting with others. You can connect with me
+            on
+            <a href="https://www.linkedin.com/in/jay-bhullar/" target="_blank" style="color:#38bdf8">
+              LinkedIn
+            </a>.
           </p>
         </div>
 
         <div class="about-cards">
           <div class="about-card">
-            <div class="about-card-label">Education</div>
-            <div class="about-card-value">BSc in Computer Science</div>
-            <div class="about-card-label">University</div>
-            <div>University Name (20XX – 20XX)</div>
+            <div class="about-card-label">Current Program</div>
+            <div class="about-card-value">
+              Master of Business Analytics and AI
+            </div>
+            <div class="about-card-label">Institution</div>
+            <div>Ontario Tech University</div>
           </div>
           <div class="about-card">
-            <div class="about-card-label">What I’m Learning</div>
-            <div class="about-card-value">React • TypeScript • UI patterns</div>
+            <div class="about-card-label">Undergraduate Degree</div>
+            <div class="about-card-value">BSc Computer Science</div>
+            <div class="about-card-label">Minor</div>
+            <div>Mathematics and Statistics</div>
           </div>
           <div class="about-card">
-            <div class="about-card-label">Looking for</div>
-            <div class="about-card-value">Internships & project collabs</div>
+            <div class="about-card-label">Focus Areas</div>
+            <div class="about-card-value">
+              Data analytics, AI, decision support
+            </div>
           </div>
           <div class="about-card">
-            <div class="about-card-label">Soft skills</div>
-            <div>Communication, ownership, curiosity, and a calm mindset under deadlines.</div>
+            <div class="about-card-label">What I value</div>
+            <div>Clear communication, collaboration and measurable impact.</div>
           </div>
         </div>
       </div>
@@ -1101,13 +972,12 @@
         <div>
           <h2 id="skills-title" class="section-title">Skills</h2>
           <p class="section-subtitle">
-            The tools, technologies, and disciplines I’ve been practicing, plus where I’m most
+            The tools, technologies, and disciplines I have been practicing, plus where I feel most
             confident right now.
           </p>
         </div>
         <span class="section-pill">Always improving</span>
       </div>
-
       <div class="skills-grid">
         <div>
           <h3 style="font-size: 0.95rem; margin-bottom: 0.4rem;">Core stack</h3>
@@ -1122,7 +992,6 @@
             <span class="skill-tag">Figma (wireframing)</span>
           </div>
         </div>
-
         <div>
           <h3 style="font-size: 0.95rem; margin-bottom: 0.4rem;">Comfort level</h3>
           <div class="skill-bars">
@@ -1137,7 +1006,7 @@
             </div>
             <div class="skill-bar">
               <div class="skill-bar-header">
-                <span class="skill-bar-label">JavaScript & logic</span>
+                <span class="skill-bar-label">JavaScript and logic</span>
                 <span class="skill-bar-value">Growing</span>
               </div>
               <div class="skill-bar-track">
@@ -1155,7 +1024,7 @@
             </div>
             <div class="skill-bar">
               <div class="skill-bar-header">
-                <span class="skill-bar-label">Design & UX thinking</span>
+                <span class="skill-bar-label">Design and UX thinking</span>
                 <span class="skill-bar-value">Curious</span>
               </div>
               <div class="skill-bar-track">
@@ -1167,19 +1036,84 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- CERTIFICATIONS (new fun section, uses existing styles) -->
+    <section id="certifications" aria-labelledby="certifications-title">
+      <div class="section-header">
+        <div>
+          <h2 id="certifications-title" class="section-title">Certifications</h2>
+          <p class="section-subtitle">
+            A quick look at formal credentials that support my interest in analytics, cloud and data
+            driven work.
+          </p>
+        </div>
+        <span class="section-pill">Verified skills</span>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-badge-row">
+            <span class="project-type">Cloud</span>
+            <span class="project-status">Issued</span>
+          </div>
+          <h3 class="project-title">AWS Certified Solutions Architect</h3>
+          <p class="project-desc">
+            Demonstrates knowledge of designing and implementing scalable and reliable solutions on
+            Amazon Web Services, with a focus on security, cost and performance.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">Architecture</span>
+            <span class="project-tag">Cloud</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge-row">
+            <span class="project-type">Data</span>
+            <span class="project-status">Issued</span>
+          </div>
+          <h3 class="project-title">Databricks Fundamentals</h3>
+          <p class="project-desc">
+            Covers core concepts of the Databricks Lakehouse platform, including data engineering and
+            working with large scale data in collaborative environments.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Databricks</span>
+            <span class="project-tag">Data Engineering</span>
+            <span class="project-tag">Lakehouse</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge-row">
+            <span class="project-type">In progress</span>
+            <span class="project-status">Learning</span>
+          </div>
+          <h3 class="project-title">Analytics and AI Focused Courses</h3>
+          <p class="project-desc">
+            Continuing to explore new online courses and university modules that deepen my skills in
+            analytics, machine learning and AI applications.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Analytics</span>
+            <span class="project-tag">Machine Learning</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS (original cards) -->
     <section id="projects" aria-labelledby="projects-title">
       <div class="section-header">
         <div>
           <h2 id="projects-title" class="section-title">Projects</h2>
           <p class="section-subtitle">
-            A selection of recent work – focusing on clean interfaces, clear structure, and real
+            A selection of recent work, focusing on clean interfaces, clear structure, and real
             learning outcomes.
           </p>
         </div>
         <span class="section-pill">Built with care</span>
       </div>
-
       <div class="projects-grid">
         <!-- Project 1 -->
         <article class="project-card">
@@ -1189,7 +1123,7 @@
           </div>
           <h3 class="project-title">Personal Portfolio Website</h3>
           <p class="project-desc">
-            A responsive, single-page portfolio designed to highlight education, skills, and projects
+            A responsive, single page portfolio designed to highlight education, skills, and projects
             with a modern, cohesive layout and smooth navigation.
           </p>
           <div class="project-tags">
@@ -1206,7 +1140,6 @@
             </a>
           </div>
         </article>
-
         <!-- Project 2 -->
         <article class="project-card">
           <div class="project-badge-row">
@@ -1216,7 +1149,7 @@
           <h3 class="project-title">Dashboard Concept</h3>
           <p class="project-desc">
             A dashboard UI for tracking tasks and metrics, focusing on layout, hierarchy, and
-            component reusability rather than complex back-end logic.
+            component reusability rather than complex back end logic.
           </p>
           <div class="project-tags">
             <span class="project-tag">Figma</span>
@@ -1229,16 +1162,15 @@
             </a>
           </div>
         </article>
-
         <!-- Project 3 -->
         <article class="project-card">
           <div class="project-badge-row">
             <span class="project-type">Learning project</span>
             <span class="project-status">2023</span>
           </div>
-          <h3 class="project-title">Small Web App / Mini Tool</h3>
+          <h3 class="project-title">Small Web App or Mini Tool</h3>
           <p class="project-desc">
-            A small tool (e.g., task list, habit tracker, or calculator) built to practice state
+            A small tool such as a task list, habit tracker, or calculator built to practice state
             management, user input handling, and local storage.
           </p>
           <div class="project-tags">
@@ -1258,26 +1190,24 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE SECTION, HEADING TEXT CHANGED TO "Projects" -->
     <section id="experience" aria-labelledby="experience-title">
       <div class="section-header">
         <div>
-          <h2 id="experience-title" class="section-title">Experience</h2>
+          <h2 id="experience-title" class="section-title">Projects</h2>
           <p class="section-subtitle">
-            Academic work, internships, and relevant roles that helped me grow as a developer and team
-            member.
+            Academic work and hands on practice that helped me grow as a developer and team member.
           </p>
         </div>
         <span class="section-pill">Learning by doing</span>
       </div>
-
       <div class="timeline">
         <article class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-role">Student Developer – University Project</div>
           <div class="timeline-meta">University Name • 2023 – 2024</div>
           <div class="timeline-body">
-            Worked as part of a small team to design and implement a web-based project for a course.
+            Worked as part of a small team to design and implement a web based project for a course.
             <ul>
               <li>Collaborated on planning, wireframing, and implementing core features.</li>
               <li>Focused on accessible layout, clear content structure, and responsive design.</li>
@@ -1285,10 +1215,9 @@
             </ul>
           </div>
         </article>
-
         <article class="timeline-item">
           <div class="timeline-dot"></div>
-          <div class="timeline-role">Freelance / Personal Projects</div>
+          <div class="timeline-role">Freelance and Personal Projects</div>
           <div class="timeline-meta">Remote • Ongoing</div>
           <div class="timeline-body">
             Built small websites and experiments to explore front-end development concepts.
@@ -1307,16 +1236,15 @@
         <div>
           <h2 id="contact-title" class="section-title">Contact</h2>
           <p class="section-subtitle">
-            Want to say hi, discuss a project, or share feedback? I’d love to hear from you.
+            Want to say hi, discuss a project, or share feedback? I would be happy to hear from you.
           </p>
         </div>
         <span class="section-pill">Let’s connect</span>
       </div>
-
       <div class="contact-grid">
         <div class="contact-card">
           <p>
-            Whether it’s a project idea, an internship opportunity, or just a friendly hello, my inbox
+            Whether it is a project idea, an internship opportunity, or just a friendly hello, my inbox
             is always open. I try my best to respond within
             <span class="contact-highlight">24 hours</span>.
           </p>
@@ -1324,7 +1252,6 @@
             Feel free to reach out directly via email or use the form here. You can also find me on
             GitHub and LinkedIn for more details about my work and background.
           </p>
-
           <div class="contact-details">
             <div class="contact-item">
               <span class="contact-label">Email</span>
@@ -1340,7 +1267,6 @@
             </div>
           </div>
         </div>
-
         <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submission can be wired to a backend or service like Formspree.');">
           <div class="form-field">
             <label for="name">Name</label>
@@ -1354,17 +1280,12 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell me a bit about what you have in mind"></textarea>
           </div>
-          <p class="form-note">
-            This is a front-end only demo. To make it fully functional, connect it to a service like
-            <strong>Formspree</strong>, <strong>Getform</strong>, or your own backend.
-          </p>
           <button class="btn-primary form-submit">
             ✉ Send Message
           </button>
         </form>
       </div>
     </section>
-
     <footer>
       <span>© <span id="year"></span> Your Friend’s Name. All rights reserved.</span>
       <div class="footer-links">
@@ -1374,7 +1295,6 @@
       </div>
     </footer>
   </main>
-
   <script>
     // Set year in footer automatically
     document.getElementById("year").textContent = new Date().getFullYear();
