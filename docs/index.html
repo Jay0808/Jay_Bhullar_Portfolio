@@ -811,9 +811,9 @@
     /* Hover preview image for assignments */
 .project-preview {
   position: absolute;
-  bottom: 100%;           
+  bottom: 100%;            /* place it ABOVE the card */
   left: 0;
-  margin-bottom: 14px;   
+  margin-bottom: 14px;     /* spacing between card + preview */
   width: 240px;
   border-radius: 18px;
   overflow: hidden;
@@ -823,7 +823,7 @@
   transform: translateY(8px) scale(0.96);
   transition: opacity 180ms ease-out, transform 180ms ease-out;
   pointer-events: none;
-  z-index: 20;            
+  z-index: 20;             /* sits above the grid without hiding text */
 }
 
 .project-preview img {
@@ -842,7 +842,8 @@
     display: none;
   }
 }
-  </style>
+
+</style>
 </head>
 <body>
   <header>
