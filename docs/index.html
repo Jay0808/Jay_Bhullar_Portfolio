@@ -796,10 +796,11 @@
     }
     .project-card {
   position: relative;
+  z-index: 1; /* <- add this */
   border-radius: var(--radius-lg);
   background: radial-gradient(circle at top, #111827 0, #020617 60%);
   border: 1px solid rgba(148, 163, 184, 0.4);
-  overflow: hidden;
+  overflow: visible; /* <- IMPORTANT: must be visible, not hidden */
   padding: 0.9rem;
   display: flex;
   flex-direction: column;
@@ -823,7 +824,7 @@
   transform: translateY(8px) scale(0.96);
   transition: opacity 180ms ease-out, transform 180ms ease-out;
   pointer-events: none;
-  z-index: 20;             /* sits above the grid without hiding text */
+  z-index: 20;
 }
 
 .project-preview img {
@@ -842,7 +843,6 @@
     display: none;
   }
 }
-
 </style>
 </head>
 <body>
