@@ -794,6 +794,56 @@
         padding-inline: 1.1rem;
       }
     }
+    .project-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top, #111827 0, #020617 60%);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: transform var(--transition-med), box-shadow var(--transition-med),
+    border-color var(--transition-med);
+  cursor: pointer;
+}
+    /* Hover preview image for assignments */
+.project-preview {
+  position: absolute;
+  right: 0.9rem;
+  top: 0.9rem;
+  width: 160px;
+  max-width: 45%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+  opacity: 0;
+  transform: scale(0.96) translateY(4px);
+  transition: opacity 180ms ease-out, transform 180ms ease-out;
+  pointer-events: none; /* don’t block links/buttons */
+  z-index: 2;
+}
+
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Show the preview when the user hovers the card or just the title */
+.project-card:hover .project-preview,
+.project-title:hover + .project-preview {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* On very small screens, hide the preview to keep layout clean */
+@media (max-width: 700px) {
+  .project-preview {
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
