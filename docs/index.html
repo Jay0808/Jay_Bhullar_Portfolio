@@ -1279,7 +1279,12 @@
             </div>
           </div>
         </div>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submission can be wired to a backend or service like Formspree.');">
+        <form
+          class="contact-form"
+          action="mailto:jaideep.bhullar@ontariotechu.net"
+          method="POST"
+          enctype="text/plain"
+        >
           <div class="form-field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" />
