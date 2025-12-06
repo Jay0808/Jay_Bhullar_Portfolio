@@ -811,17 +811,16 @@
     /* Hover preview image for assignments */
 .project-preview {
   position: absolute;
-  right: 0.9rem;
-  top: 0.9rem;
-  width: 160px;
-  max-width: 45%;
-  border-radius: 14px;
+  right: -32px;          /* push slightly outside the card */
+  top: -22px;
+  width: 180px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
   opacity: 0;
-  transform: scale(0.96) translateY(4px);
+  transform: scale(0.95) translateY(4px);
   transition: opacity 180ms ease-out, transform 180ms ease-out;
-  pointer-events: none; /* don’t block links/buttons */
+  pointer-events: none;
   z-index: 2;
 }
 
@@ -1175,6 +1174,12 @@
       <span>📄</span> View Report
     </a>
   </div>
+    <div class="project-preview">
+    <img
+      src="images/assignment1.png"
+      alt="Assignment 1 preview"
+    />
+  </div>
 </article>
 
     <!-- Assignment 2 -->
@@ -1208,6 +1213,12 @@
     >
       <span>📄</span> View Redesign
     </a>
+  </div>
+  <div class="project-preview">
+    <img
+      src="images/assignment2.png"
+      alt="Assignment 2 preview"
+    />
   </div>
 </article>
 
@@ -1244,6 +1255,12 @@
       <span>🎨</span> View infographic
     </a>
   </div>
+  <div class="project-preview">
+    <img
+      src="images/assignment3.png"
+      alt="Assignment 3 preview"
+    />
+  </div>
 </article>
 <!-- Assignment 4 -->
   <article class="project-card">
@@ -1252,7 +1269,7 @@
       <span class="project-status">2025</span>
     </div>
   
-    <h3 class="project-title">Assignment 4: Presentation Analysis</h3>
+    <h3 class="project-title">Assignment 4: Algorithm vs Ambition</h3>
   
     <p class="project-desc">
       A reflective assignment based on the talk
