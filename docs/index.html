@@ -543,96 +543,70 @@
     }
     /* Projects cards */
 /* =========================
-   PROJECTS (Newer Code) — Fixed + Stable Hover Preview
-   - Matches your newer HTML (project-subheading, ul.project-desc, etc.)
-   - 3-per-row on desktop
-   - Hover preview displays above card and does NOT get clipped
-   - No other site sections changed
+   PROJECTS – FIXED & STABLE
    ========================= */
 
-/* Grid container (Projects section) */
 .projects-grid {
   display: grid;
-  gap: 1.4rem;
-
-  /* 3 per row on desktop */
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  /* allow hover preview to escape */
-  overflow: visible;
-
-  /* make z-index predictable */
+  gap: 1.4rem;
   position: relative;
-  isolation: isolate;
+  overflow: visible;
 }
 
-/* Card */
 .project-card {
   position: relative;
-  z-index: 1;
-
   border-radius: var(--radius-lg);
   background: radial-gradient(circle at top, #111827 0, #020617 60%);
   border: 1px solid rgba(148, 163, 184, 0.4);
-
-  /* MUST be visible for hover preview */
-  overflow: visible;
-
   padding: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+  cursor: pointer;
+
+  /* IMPORTANT */
+  overflow: visible;
+  z-index: 1;
 
   transition: transform var(--transition-med),
-    box-shadow var(--transition-med),
-    border-color var(--transition-med);
-
-  cursor: default;
-  height: 100%;
+              box-shadow var(--transition-med),
+              border-color var(--transition-med);
 }
 
-/* Hover elevation + bring card above neighbors so preview isn't hidden */
 .project-card:hover {
-  transform: translateY(-4px) translateZ(0);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
   border-color: rgba(56, 189, 248, 0.7);
-  z-index: 50;
+  z-index: 20;
 }
 
-/* Subheading pill (top label in newer cards) */
+/* Pills / headings */
 .project-subheading {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
   font-size: 0.72rem;
-  color: var(--muted);
-  padding: 0.2rem 0.55rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--muted);
   width: fit-content;
 }
 
-/* Title */
 .project-title {
   font-size: 0.98rem;
   font-weight: 600;
 }
 
-/* Description list (newer HTML uses <ul class="project-desc">) */
+/* Description */
 .project-desc {
   font-size: 0.8rem;
   color: var(--muted);
   line-height: 1.6;
-
-  /* for bullets */
   padding-left: 1.1rem;
-  margin: 0;
 }
 
 .project-desc li {
   margin-bottom: 0.35rem;
-  line-height: 1.5;
 }
 
 /* Tags */
@@ -668,20 +642,17 @@
   color: var(--accent);
 }
 
-.project-link:hover {
-  text-decoration: underline;
-}
+/* =========================
+   HOVER PREVIEW (ORIGINAL)
+   ========================= */
 
-/* Hover preview (only works if you include <div class="project-preview"><img ...></div> inside the card) */
 .project-preview {
   position: absolute;
-
-  /* above the card */
   bottom: 100%;
   left: 0;
   margin-bottom: 14px;
 
-  width: 240px;
+  width: 260px;
   border-radius: 18px;
   overflow: hidden;
 
@@ -690,11 +661,10 @@
 
   opacity: 0;
   transform: translateY(8px) scale(0.96);
-  transition: opacity 180ms ease-out, transform 180ms ease-out;
+  transition: opacity 180ms ease-out,
+              transform 180ms ease-out;
 
   pointer-events: none;
-
-  /* keep above everything within the grid */
   z-index: 999;
 }
 
@@ -709,14 +679,13 @@
   transform: translateY(0) scale(1);
 }
 
-/* Tablet: 2 per row */
+/* Responsive */
 @media (max-width: 1000px) {
   .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile: 1 per row + hide preview */
 @media (max-width: 700px) {
   .projects-grid {
     grid-template-columns: 1fr;
@@ -725,6 +694,7 @@
     display: none;
   }
 }
+
 
 
     /* Experience / Timeline */
@@ -1299,30 +1269,29 @@
     <div>
       <h2 id="projects-title" class="section-title">Projects</h2>
       <p class="section-subtitle">
-        A selection of recent work that focuses on clean interfaces, clear structure, and real learning outcomes.
+        A selection of recent work that focuses on clean interfaces, clear structure,
+        and real learning outcomes.
       </p>
     </div>
     <span class="section-pill">Course Deliverables</span>
   </div>
 
-  <!-- ONE grid, 3 per row -->
   <div class="projects-grid">
 
     <!-- 1 -->
     <article class="project-card">
-      <div class="project-subheading">Visualization &amp; Storytelling</div>
+      <div class="project-subheading">Visualization & Storytelling</div>
       <h3 class="project-title">The Tall Tax</h3>
 
-      <!-- Optional hover preview (remove if you don’t want it) -->
       <div class="project-preview">
         <img src="images/assignment1.png" alt="The Tall Tax preview" />
       </div>
 
       <ul class="project-desc">
-        <li>Created a narrative-driven storyboard exploring hidden costs faced by very tall individuals.</li>
-        <li>Used humor and relatable scenarios to communicate data-backed insights.</li>
-        <li>Highlighted how design standards impact accessibility and daily comfort.</li>
-        <li><strong>Technologies:</strong> Canva, Visual storytelling, Data-driven narrative</li>
+        <li>Narrative-driven storyboard exploring hidden costs faced by tall individuals.</li>
+        <li>Used humor and relatable scenarios to communicate insights.</li>
+        <li>Highlighted accessibility and design standards.</li>
+        <li><strong>Technologies:</strong> Canva, Visual storytelling</li>
       </ul>
 
       <div class="project-tags">
@@ -1332,84 +1301,64 @@
       </div>
 
       <div class="project-links">
-        <a href="https://www.canva.com/design/DAG032kUWAE/uBky-HuyEVu_RFtj83CzFA/edit"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          🎨 View Comic
-        </a>
-        <a href="https://drive.google.com/file/d/10gvbaO9f1VMMduRhxVa3c82ZmGbDS2kB/view"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          📄 View Report
-        </a>
+        <a href="#" class="project-link">🎨 View Comic</a>
+        <a href="#" class="project-link">📄 View Report</a>
       </div>
     </article>
 
     <!-- 2 -->
     <article class="project-card">
-      <div class="project-subheading">Visualization &amp; Storytelling</div>
+      <div class="project-subheading">Visualization & Storytelling</div>
       <h3 class="project-title">Re-Design the Information Graphic</h3>
 
       <div class="project-preview">
-        <img src="images/assignment2.png" alt="Re-Design preview" />
+        <img src="images/assignment2.png" alt="Information graphic preview" />
       </div>
 
       <ul class="project-desc">
-        <li>Recreated Florence Nightingale’s Coxcomb Diagram using historical mortality data.</li>
-        <li>Applied modern visualization principles to improve clarity and interaction.</li>
-        <li>Enabled data exploration through hover interactions and clean geometric layouts.</li>
-        <li><strong>Technologies:</strong> Python, Plotly, Data visualization</li>
+        <li>Recreated Florence Nightingale’s Coxcomb Diagram.</li>
+        <li>Improved clarity with modern interaction techniques.</li>
+        <li><strong>Technologies:</strong> Python, Plotly</li>
       </ul>
 
       <div class="project-tags">
         <span class="project-tag">Visual Design</span>
-        <span class="project-tag">Information Architecture</span>
         <span class="project-tag">Redesign</span>
       </div>
 
       <div class="project-links">
-        <a href="https://drive.google.com/file/d/112ZaNvVP1HMarEHx3dpRGIQ9J7JqlFXx/view"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          📄 View Redesign
-        </a>
+        <a href="#" class="project-link">📄 View Redesign</a>
       </div>
     </article>
 
     <!-- 3 -->
     <article class="project-card">
-      <div class="project-subheading">Visualization &amp; Storytelling</div>
+      <div class="project-subheading">Visualization & Storytelling</div>
       <h3 class="project-title">Data Infographics</h3>
 
       <div class="project-preview">
-        <img src="images/assignment3.png" alt="Data Infographics preview" />
+        <img src="images/data-infographics.png" alt="Data infographics preview" />
       </div>
 
       <ul class="project-desc">
-        <li>Designed an infographic analyzing the effects of Daylight Saving Time on Canadians.</li>
-        <li>Interpreted data related to sleep disruption, health risks, and accident rates.</li>
-        <li>Focused on clear visual hierarchy and audience-friendly storytelling.</li>
-        <li><strong>Technologies:</strong> Canva, Data visualization, Research synthesis</li>
+        <li>Analyzed effects of Daylight Saving Time on Canadians.</li>
+        <li>Focused on hierarchy and audience clarity.</li>
+        <li><strong>Technologies:</strong> Canva</li>
       </ul>
 
       <div class="project-tags">
-        <span class="project-tag">Data Visualization</span>
         <span class="project-tag">Infographics</span>
         <span class="project-tag">Storytelling</span>
       </div>
 
       <div class="project-links">
-        <a href="https://drive.google.com/file/d/1bI3etLGdE-2KgIjWTwf7FwAqKnA4WYhW/view"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          📄 View Report
-        </a>
-        <a href="https://www.canva.com/design/DAG4aXB3KDo/f-bYkW9hOsnSK8OXvvj2uQ/edit"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          🎨 View Infographic
-        </a>
+        <a href="#" class="project-link">🎨 View Infographic</a>
       </div>
     </article>
 
     <!-- 4 -->
     <article class="project-card">
-      <div class="project-subheading">Visualization &amp; Storytelling</div>
+      <div class="project-subheading">Visualization & Storytelling</div>
       <h3 class="project-title">Algorithm vs Ambition</h3>
 
       <div class="project-preview">
@@ -1417,23 +1366,17 @@
       </div>
 
       <ul class="project-desc">
-        <li>Developed a character-driven story grounded in real economic and AI exposure data.</li>
-        <li>Connected affordability, housing pressure, and wage trends to a personal narrative.</li>
-        <li>Translated quantitative insights into emotionally engaging storytelling.</li>
-        <li><strong>Technologies:</strong> Data analysis, Storyboarding, Video presentation</li>
+        <li>Character-driven story grounded in economic data.</li>
+        <li>Translated quantitative insights into narrative.</li>
       </ul>
 
       <div class="project-tags">
-        <span class="project-tag">Communication</span>
         <span class="project-tag">Presentation</span>
         <span class="project-tag">Reflection</span>
       </div>
 
       <div class="project-links">
-        <a href="https://www.youtube.com/watch?v=3L0x4Onqjqc"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          ▶️ Watch Video
-        </a>
+        <a href="#" class="project-link">▶ Watch Video</a>
       </div>
     </article>
 
@@ -1443,33 +1386,27 @@
       <h3 class="project-title">Ethanol Price Forecasting</h3>
 
       <div class="project-preview">
-        <img src="images/ethanol.png" alt="Ethanol Price Forecasting preview" />
+        <img src="images/ethanol.png" alt="Ethanol forecasting preview" />
       </div>
 
       <ul class="project-desc">
-        <li>Forecasted short-term ethanol price movements to support trading decisions.</li>
-        <li>Integrated ethanol index data with corn and crude oil indicators.</li>
-        <li>Selected a lag-based regression model for practical deployment.</li>
-        <li><strong>Technologies:</strong> Python, Pandas, Time-series forecasting</li>
+        <li>Short-term price forecasting for trading support.</li>
+        <li><strong>Technologies:</strong> Python, Pandas</li>
       </ul>
 
       <div class="project-tags">
         <span class="project-tag">Forecasting</span>
-        <span class="project-tag">Modeling</span>
-        <span class="project-tag">Business Analytics</span>
+        <span class="project-tag">Analytics</span>
       </div>
 
       <div class="project-links">
-        <a href="https://drive.google.com/file/d/1lk0flaxxbQa2XXuzHCEg7puMPMskCVY6/view"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          📄 View Report
-        </a>
+        <a href="#" class="project-link">📄 View Report</a>
       </div>
     </article>
 
     <!-- 6 -->
     <article class="project-card">
-      <div class="project-subheading">Programming &amp; Data Processing</div>
+      <div class="project-subheading">Programming & Data Processing</div>
       <h3 class="project-title">Can Signals Beat the Benchmark?</h3>
 
       <div class="project-preview">
@@ -1477,29 +1414,22 @@
       </div>
 
       <ul class="project-desc">
-        <li>Built an algorithmic backtesting workflow to evaluate trading strategies.</li>
-        <li>Compared technical indicators against a passive benchmark.</li>
-        <li>Focused on modular, repeatable strategy testing.</li>
-        <li><strong>Technologies:</strong> Python, Pandas, yfinance API</li>
+        <li>Algorithmic trading strategy backtesting.</li>
+        <li><strong>Technologies:</strong> Python, yfinance</li>
       </ul>
 
       <div class="project-tags">
         <span class="project-tag">Backtesting</span>
-        <span class="project-tag">Technical Analysis</span>
         <span class="project-tag">Programming</span>
       </div>
 
       <div class="project-links">
-        <a href="https://drive.google.com/file/d/1pfGax0tFvH_Y_lRx5G1tkcFazma3OJii/view"
-           target="_blank" rel="noopener noreferrer" class="project-link">
-          📄 View Report
-        </a>
+        <a href="#" class="project-link">📄 View Report</a>
       </div>
     </article>
 
   </div>
 </section>
-
 
     <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-title">
