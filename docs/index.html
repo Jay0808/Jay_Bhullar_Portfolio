@@ -542,9 +542,6 @@
       background: linear-gradient(90deg, #38bdf8, #22c55e);
     }
     /* Projects cards */
-/* =========================
-   PROJECTS – FIXED & STABLE
-   ========================= */
 
 .projects-grid {
   display: grid;
@@ -681,13 +678,13 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
-  .projects-grid {
+  .-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 700px) {
-  .projects-grid {
+  .-grid {
     grid-template-columns: 1fr;
   }
   .project-preview {
@@ -948,7 +945,7 @@
         <div class="nav-links">
           <a href="#about" class="nav-link">About</a>
           <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#" class="nav-link"></a>
           <a href="#experience" class="nav-link">Experience</a>
         </div>
         <button
@@ -989,9 +986,9 @@
             </a>
             <button
               class="btn-secondary"
-              onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
+              onclick="document.getElementById('').scrollIntoView({behavior: 'smooth'})"
             >
-              👀 View Projects
+              👀 View 
             </button>
           </div>
         </div>
@@ -1012,7 +1009,7 @@
     <div class="hero-meta">
       <div class="hero-meta-item">
         <div class="hero-meta-label">Experience</div>
-        <div class="hero-meta-value">Analytics &amp; CS projects</div>
+        <div class="hero-meta-value">Analytics &amp; CS </div>
       </div>
       <div class="hero-meta-item">
         <div class="hero-meta-label">Timezone</div>
@@ -1439,68 +1436,79 @@
     </article>
 
     <!-- Business Analytics -->
-    <article class="project-card">
-      <div class="project-subheading">Business Analytics</div>
-      <div class="project-badge-row"></div>
+<article class="project-card">
+  <div class="project-subheading">Business Analytics</div>
+  <div class="project-badge-row"></div>
 
-      <h3 class="project-title">Ethanol Price Forecasting</h3>
+  <h3 class="project-title">Ethanol Price Forecasting</h3>
 
-      <ul class="project-desc">
-        <li>Forecasted short-term movements in ethanol prices to support trading decisions over a 3-month horizon.</li>
-        <li>Integrated ethanol price index data with corn and crude oil indicators to capture cost and macro drivers.</li>
-        <li>Built and compared forecasting approaches, then selected a lag-based regression model for practical use.</li>
-        <li><strong>Technologies:</strong> Python, Pandas, Time-series forecasting, Regression modeling</li>
-      </ul>
+  <ul class="project-desc">
+    <li>Forecasted short-term movements in ethanol prices to support trading decisions over a 3-month horizon.</li>
+    <li>Integrated ethanol price index data with corn and crude oil indicators to capture cost and macro drivers.</li>
+    <li>Built and compared forecasting approaches, then selected a lag-based regression model for practical use.</li>
+    <li><strong>Technologies:</strong> Python, Pandas, Time-series forecasting, Regression modeling</li>
+  </ul>
 
-      <div class="project-tags">
-        <span class="project-tag">Forecasting</span>
-        <span class="project-tag">Modeling</span>
-        <span class="project-tag">Business Analytics</span>
-      </div>
+  <div class="project-tags">
+    <span class="project-tag">Forecasting</span>
+    <span class="project-tag">Modeling</span>
+    <span class="project-tag">Business Analytics</span>
+  </div>
 
-      <div class="project-links">
-        <a
-          href="https://drive.google.com/file/d/1lk0flaxxbQa2XXuzHCEg7puMPMskCVY6/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-link"
-        >
-          <span>📄</span> View report
-        </a>
-      </div>
-    </article>
+  <div class="project-links">
+    <a
+      href="https://drive.google.com/file/d/1lk0flaxxbQa2XXuzHCEg7puMPMskCVY6/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-link"
+    >
+      <span>📄</span> View report
+    </a>
+  </div>
 
-    <!-- Programming and Data Processing -->
-    <article class="project-card">
-      <div class="project-subheading">Programming &amp; Data Processing</div>
-      <div class="project-badge-row"></div>
+  <!-- Hover preview added (ONLY change) -->
+  <div class="project-preview">
+    <img src="images/Ethanol.png" alt="Ethanol Price Forecasting preview" />
+  </div>
+</article>
 
-      <h3 class="project-title">Can Signals Beat the Benchmark?</h3>
+<!-- Programming and Data Processing -->
+<article class="project-card">
+  <div class="project-subheading">Programming &amp; Data Processing</div>
+  <div class="project-badge-row"></div>
 
-      <ul class="project-desc">
-        <li>Built an algorithmic backtesting workflow to compare technical indicator strategies vs a passive benchmark.</li>
-        <li>Evaluated multiple strategies using return and risk-based measures to understand consistency and drawdowns.</li>
-        <li>Focused on clean data handling and modular implementation to support repeatable strategy testing.</li>
-        <li><strong>Technologies:</strong> Python, Pandas, yfinance API, Algorithmic backtesting</li>
-      </ul>
+  <h3 class="project-title">Can Signals Beat the Benchmark?</h3>
 
-      <div class="project-tags">
-        <span class="project-tag">Backtesting</span>
-        <span class="project-tag">Technical Analysis</span>
-        <span class="project-tag">Programming</span>
-      </div>
+  <ul class="project-desc">
+    <li>Built an algorithmic backtesting workflow to compare technical indicator strategies vs a passive benchmark.</li>
+    <li>Evaluated multiple strategies using return and risk-based measures to understand consistency and drawdowns.</li>
+    <li>Focused on clean data handling and modular implementation to support repeatable strategy testing.</li>
+    <li><strong>Technologies:</strong> Python, Pandas, yfinance API, Algorithmic backtesting</li>
+  </ul>
 
-      <div class="project-links">
-        <a
-          href="https://drive.google.com/file/d/1pfGax0tFvH_Y_lRx5G1tkcFazma3OJii/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-link"
-        >
-          <span>📄</span> View report
-        </a>
-      </div>
-    </article>
+  <div class="project-tags">
+    <span class="project-tag">Backtesting</span>
+    <span class="project-tag">Technical Analysis</span>
+    <span class="project-tag">Programming</span>
+  </div>
+
+  <div class="project-links">
+    <a
+      href="https://drive.google.com/file/d/1pfGax0tFvH_Y_lRx5G1tkcFazma3OJii/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-link"
+    >
+      <span>📄</span> View report
+    </a>
+  </div>
+
+  <!-- Hover preview added (ONLY change) -->
+  <div class="project-preview">
+    <img src="images/ZQQ.png" alt="Can Signals Beat the Benchmark preview" />
+  </div>
+</article>
+
 
   </div>
 </section>
