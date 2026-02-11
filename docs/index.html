@@ -48,8 +48,24 @@ html[data-theme="light"] {
   --border-subtle: rgba(15, 23, 42, 0.18);
   --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
+html[data-theme="light"] .hero-avatar {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  border-color: rgba(15, 23, 42, 0.14);
+}
 
-/* Light mode background (since body uses a hard-coded dark gradient right now) */
+    html[data-theme="light"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(2, 132, 199, 0.45);
+}
+
+
+/* Light mode background */
 html[data-theme="light"] body {
   background: radial-gradient(circle at top, #ffffff 0, #f1f5f9 55%, #e2e8f0 100%);
   color: var(--text);
@@ -66,7 +82,7 @@ html[data-theme="light"] header {
   border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
 /* =========================
-   Light mode component fixes
+   Light mode component
    ========================= */
 html[data-theme="light"] .hero-card,
 html[data-theme="light"] .project-card {
@@ -113,9 +129,11 @@ html[data-theme="light"] textarea {
 /* Nav logo inner was still dark in light mode */
 html[data-theme="light"] .nav-logo-inner {
   background: radial-gradient(circle at top, #ffffff 0, #f1f5f9 65%, #e2e8f0 100%);
+  color: var(--accent);
 }
 
-/* Timeline dot border was hard-coded dark */
+
+/* Timeline  */
 html[data-theme="light"] .timeline-dot {
   border-color: #ffffff;
 }
@@ -1120,12 +1138,8 @@ html[data-theme="light"] .nav-cta:hover {
             >
               📄 View Resume
             </a>
-            <button
-              class="btn-secondary"
-              onclick="document.getElementById('').scrollIntoView({behavior: 'smooth'})"
-            >
-              👀 View 
-            </button>
+            <button class="btn-secondary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"> 👀 View Projects</button>
+
           </div>
         </div>
         <div class="hero-right">
