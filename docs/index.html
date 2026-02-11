@@ -486,6 +486,11 @@ html[data-theme="light"] header {
       color: var(--muted);
       background: rgba(15, 23, 42, 0.8);
     }
+    /* Anchor offset for sticky header */
+.anchor {
+  scroll-margin-top: calc(var(--nav-height) + 18px);
+}
+
     /* About */
     .about-grid {
   display: block;
@@ -976,12 +981,13 @@ html[data-theme="light"] header {
       </a>
 
       <!-- CENTER: Links -->
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-      </div>
+   <div class="nav-links">
+  <a href="#about-title" class="nav-link">About</a>
+  <a href="#skills-title" class="nav-link">Skills</a>
+  <a href="#experience-title" class="nav-link">Experience</a>
+  <a href="#projects-title" class="nav-link">Projects</a>
+</div>
+
 
       <!-- RIGHT: Actions -->
       <div class="nav-actions">
@@ -1073,7 +1079,7 @@ html[data-theme="light"] header {
     <section id="about" aria-labelledby="about-title">
       <div class="section-header">
         <div>
-          <h2 id="about-title" class="section-title">About</h2>
+<h2 id="about-title" class="section-title anchor">About</h2>
         </div>
         <span class="section-pill">Who I am</span>
       </div>
@@ -1105,7 +1111,7 @@ html[data-theme="light"] header {
     <section id="skills" aria-labelledby="skills-title">
       <div class="section-header">
         <div>
-          <h2 id="skills-title" class="section-title">Skills</h2>
+<h2 id="skills-title" class="section-title">Skills</h2>
         </div>
         <span class="section-pill">Always improving</span>
       </div>
@@ -1225,7 +1231,7 @@ html[data-theme="light"] header {
 
     <div>
 
-      <h2 id="experience-title" class="section-title">Experience</h2>
+<h2 id="experience-title" class="section-title anchor">Experience</h2>
 
       <p class="section-subtitle">
         Professional experience where I applied data analytics, reporting, and business intelligence skills in real-world settings.
@@ -1307,7 +1313,7 @@ html[data-theme="light"] header {
 <section id="projects" aria-labelledby="projects-title">
   <div class="section-header">
     <div>
-      <h2 id="projects-title" class="section-title">Projects</h2>
+<h2 id="projects-title" class="section-title anchor">Projects</h2>
       <p class="section-subtitle">
         A selection of recent work that focuses on clean interfaces, clear structure, and real
         learning outcomes.
