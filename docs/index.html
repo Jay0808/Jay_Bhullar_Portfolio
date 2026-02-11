@@ -33,6 +33,39 @@
       --transition-med: 220ms ease-out;
       --nav-height: 70px;
     }
+    /* Light mode overrides */
+html[data-theme="light"] {
+  --bg: #f7fafc;
+  --bg-elevated: #ffffff;
+  --bg-soft: #f1f5f9;
+
+  --text: #0b1220;
+  --muted: #475569;
+
+  --accent: #0284c7;
+  --accent-soft: rgba(2, 132, 199, 0.14);
+
+  --border-subtle: rgba(15, 23, 42, 0.18);
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* Light mode background (since body uses a hard-coded dark gradient right now) */
+html[data-theme="light"] body {
+  background: radial-gradient(circle at top, #ffffff 0, #f1f5f9 55%, #e2e8f0 100%);
+  color: var(--text);
+}
+
+/* Light mode header glass */
+html[data-theme="light"] header {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.72),
+    transparent
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+}
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -1568,7 +1601,6 @@
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </div>
     </footer>
   </main>
