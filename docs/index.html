@@ -65,6 +65,60 @@ html[data-theme="light"] header {
   );
   border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
+/* =========================
+   Light mode component fixes
+   ========================= */
+html[data-theme="light"] .hero-card,
+html[data-theme="light"] .project-card {
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  border-color: rgba(15, 23, 42, 0.14);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme="light"] .hero-kicker,
+html[data-theme="light"] .hero-tag,
+html[data-theme="light"] .hero-pill,
+html[data-theme="light"] .hero-meta-item,
+html[data-theme="light"] .section-pill,
+html[data-theme="light"] .skill-tag,
+html[data-theme="light"] .project-subheading,
+html[data-theme="light"] .project-tag {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(15, 23, 42, 0.14);
+  color: var(--muted);
+}
+
+html[data-theme="light"] .about-card,
+html[data-theme="light"] .contact-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(15, 23, 42, 0.14);
+  color: var(--muted);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* Skills bar track was staying dark */
+html[data-theme="light"] .skill-bar-track {
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.10);
+}
+
+/* Inputs were staying dark */
+html[data-theme="light"] input,
+html[data-theme="light"] textarea {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+/* Nav logo inner was still dark in light mode */
+html[data-theme="light"] .nav-logo-inner {
+  background: radial-gradient(circle at top, #ffffff 0, #f1f5f9 65%, #e2e8f0 100%);
+}
+
+/* Timeline dot border was hard-coded dark */
+html[data-theme="light"] .timeline-dot {
+  border-color: #ffffff;
+}
 
     * {
       box-sizing: border-box;
