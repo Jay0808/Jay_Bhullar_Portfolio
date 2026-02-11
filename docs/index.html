@@ -75,6 +75,11 @@
       );
       border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     }
+
+    section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 18px);
+}
+
     .nav {
       height: var(--nav-height);
       display: flex;
@@ -127,12 +132,13 @@
       font-size: 0.7rem;
       color: var(--muted);
     }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      font-size: 0.85rem;
-    }
+   .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; 
+  font-size: 0.85rem;
+}
+
     .nav-link {
       position: relative;
       color: var(--muted);
