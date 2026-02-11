@@ -96,133 +96,108 @@ html[data-theme="light"] header {
       padding: 0 1.5rem 4rem;
     }
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(
-        to bottom,
-        rgba(2, 6, 23, 0.9),
-        rgba(2, 6, 23, 0.65),
-        transparent
-      );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    }
-
-    section[id] {
-  scroll-margin-top: calc(var(--nav-height) + 18px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 6, 23, 0.92),
+    rgba(2, 6, 23, 0.70),
+    transparent
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
-    .nav {
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .nav-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: conic-gradient(
-        from 180deg at 50% 50%,
-        #38bdf8,
-        #a855f7,
-        #f97316,
-        #22c55e,
-        #38bdf8
-      );
-      padding: 2px;
-    }
-    .nav-logo-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 55%, #000 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-    }
-    .nav-title {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-    .nav-title-main {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .nav-title-sub {
-      font-size: 0.7rem;
-      color: var(--muted);
-    }
-   .nav-links {
+.nav {
+  height: var(--nav-height);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: max-content;
+}
+
+.nav-links {
+  justify-self: center;
   display: flex;
   align-items: center;
-  gap: 1.2rem; 
-  font-size: 0.85rem;
+  gap: 1.6rem; /* tighter, cleaner spacing */
+  font-size: 0.88rem;
 }
 
-    .nav-link {
-      position: relative;
-      color: var(--muted);
-      cursor: pointer;
-      padding-bottom: 2px;
-      transition: color var(--transition-fast);
-    }
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 0;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #38bdf8, #a855f7);
-      transition: width var(--transition-med);
-    }
-    .nav-link:hover {
-      color: var(--text);
-    }
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #38bdf8, #6366f1);
-      color: #0b1120;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.55);
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-      white-space: nowrap;
-    }
-    .nav-cta span {
-      font-size: 1rem;
-    }
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 40px rgba(37, 99, 235, 0.7);
-    }
-    .nav-cta:active {
-      transform: translateY(0px) scale(0.98);
-      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
-    }
+.nav-link {
+  position: relative;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.3rem 0.1rem;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  transition: width var(--transition-med);
+}
+
+.nav-link:hover {
+  color: var(--text);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Theme button */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: rgba(15, 23, 42, 0.72);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+@media (max-width: 700px) {
+  .nav {
+    grid-template-columns: auto auto;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
     /* Hero */
     .hero {
       padding: 3rem 0 3.5rem;
@@ -969,24 +944,34 @@ html[data-theme="light"] header {
 </style>
 </head>
 <body>
-  <header>
-    <div class="page">
-      <nav class="nav">
-        <div class="nav-brand">
-          <div class="nav-logo">
-            <div class="nav-logo-inner">JB</div>
-          </div>
-          <div class="nav-title">
-            <span class="nav-title-main">Jay Bhullar</span>
-            <span class="nav-title-sub">Portfolio</span>
-          </div>
+ <header>
+  <div class="page">
+    <nav class="nav">
+      <!-- LEFT: Brand -->
+      <a href="#" class="nav-brand" aria-label="Home">
+        <div class="nav-logo">
+          <div class="nav-logo-inner">JB</div>
         </div>
-        <div class="nav-links">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#" class="nav-link"></a>
-          <a href="#experience" class="nav-link">Experience</a>
+        <div class="nav-title">
+          <span class="nav-title-main">Jay Bhullar</span>
+          <span class="nav-title-sub">Portfolio</span>
         </div>
+      </a>
+
+      <!-- CENTER: Links -->
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+      </div>
+
+      <!-- RIGHT: Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+          🌙
+        </button>
+
         <button
           class="nav-cta"
           onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
@@ -994,9 +979,11 @@ html[data-theme="light"] header {
           <span>✉</span>
           Let’s Connect
         </button>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </nav>
+  </div>
+</header>
+
   <main class="page">
     <!-- HERO -->
     <section aria-label="Hero">
